@@ -1,0 +1,5 @@
+LOCAL_PUTTY_DIR = "C:\\Path_to\\PuTTy\\"
+SANDBOX_IP = "ip.addr.of.sandbox"
+SANDBOX_USERNAME = "username_of_sandbox_account"
+SANDBOX_PASSWORD = "password_of_sandbox_account"
+SANDBOX_DEBUGGING_FOLDER = "C:\directory_that_exists_on_sandbox"
