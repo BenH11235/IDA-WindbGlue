@@ -11,3 +11,6 @@ SANDBOX_PASSWORD = "password_of_sandbox_account"
 #The script requires a pre-existing directory at the sandbox to transfer binary files to.
 #Create this directory at the sandbox and set this variable to equal the directory's path.
 SANDBOX_DEBUGGING_FOLDER = "C:\directory_that_exists_on_sandbox"
+
+#Set this to the path of rundll32.exe in the sandbox (e.g. "C:\\windows\\system32\\rundll32.exe")
+SANDBOX_RUNDLL_PATH = "C:\\path_to\\rundll32.exe"

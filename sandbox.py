@@ -12,15 +12,18 @@ def send(fname,target_dir):
     os.chdir(config.LOCAL_PUTTY_DIR)
     pscp_exe = quote(os.path.join(config.LOCAL_PUTTY_DIR,"pscp.exe"))
     copy_to_sandbox_cmd = [
-        pscp_exe, 
+        pscp_exe,
+        "-P",
+        "22",
         "-pw", 
         config.SANDBOX_PASSWORD, 
         quote(fname), 
         quote(config.SANDBOX_USERNAME)+"@"+config.SANDBOX_IP+":"+quote(target_fname)
-    ] 
+    ]
     print("\n")
-    subprocess.call(" ".join(copy_to_sandbox_cmd), shell=True)
-    return target_fname
+    print(" ".join(copy_to_sandbox_cmd))
+    result = subprocess.check_output(" ".join(copy_to_sandbox_cmd), shell=True)
+    return target_fname, result
 
 if __name__ == "__main__":
     fname = sys.argv[1]
